@@ -1,0 +1,24 @@
+table{
+    border-collapse: collapse;
+    width:98%
+}
+th, td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+th {
+    color: green;
+}
+td{
+    width:30px
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+h2 {
+    color: green;
+}
+.in-table {
+    color: white;
+    background: green;
+}
