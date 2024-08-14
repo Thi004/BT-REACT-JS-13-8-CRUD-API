@@ -1,15 +1,28 @@
 import '../style/ListProduct.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 function ListProduct() {
     let [product, setProduct] = useState([]);
-    useEffect(() => {
+    const getList = () => {
         axios.get("http://localhost:3000/products").then((res) => {
             let data = res.data;
             setProduct(data);
         })
+    }
+    useEffect(() => {
+        getList()
     }, []);
+    const remove = (id) => {
+        let isConfirm = window.confirm("Are you sure?");
+        if (isConfirm) {
+            axios.delete(`http://localhost:3000/products/${id}`).then((res)=>{
+                alert("Deleted");
+                getList()
+            })
+        }
+    }
     return (
         <>
             <h2>List Product</h2>
@@ -32,10 +45,10 @@ function ListProduct() {
                                 <td>{item.price}</td>
                                 <td>{item.quantity}</td>
                                 <td>
-                                    <button className={'in-table'}>Delete</button>
+                                    <button onClick={() => {remove(item.id)}} className={'in-table'}>Delete</button>
                                 </td>
                                 <td>
-                                    <button className={'in-table'}>Update</button>
+                                    <button className={'in-table'}><Link className={'in-table'} to={`/home/update/${item.id}`}>Update</Link></button>
                                 </td>
                             </tr>
                         </>

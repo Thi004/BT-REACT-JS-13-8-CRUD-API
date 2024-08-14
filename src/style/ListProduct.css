@@ -21,4 +21,5 @@ h2 {
 .in-table {
     color: white;
     background: green;
+    text-decoration: none;
 }
