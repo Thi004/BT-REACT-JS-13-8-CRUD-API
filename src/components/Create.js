@@ -39,7 +39,7 @@ function Create() {
     }
     return (
         <>
-            <h2>Add New Product</h2>
+            <h1>Add New Product</h1>
             <input type="text" placeholder={'Id'} value={id} onChange={(event) => {
                 changeId(event)
             }}/>

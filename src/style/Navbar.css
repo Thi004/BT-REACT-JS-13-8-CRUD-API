@@ -2,13 +2,26 @@
     width: 100px;
     height: 50px;
     background: blue;
-    border: 1px solid lightslategray;
+    border: 1px solid blue;
     margin-left: 5px;
     border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
     font-size: medium;
 }
 .link {
     color: white;
     text-decoration: none;
+}
+.user {
+    width: 100px;
+    height: 100px;
+    background: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    padding: 15px 15px;
+    margin-left: 20px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
 }

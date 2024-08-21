@@ -25,7 +25,7 @@ function ListProduct() {
     }
     return (
         <>
-            <h2>List Product</h2>
+            <h1>List Product</h1>
             <table>
                 <tr>
                     <th>STT</th>
